@@ -93,3 +93,10 @@ body {
 .center {
   text-align: center;
 }
+
+a{
+  color: #76c0ae;
+}
+a:visited{
+  color: #307e6c;
+}

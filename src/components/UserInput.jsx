@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-export default function UserInput({label, inputId, placeholder}){
+export default function UserInput({label, inputId, value, onInputChange}){
     /*const [userInput, setUserInput]= useState({
         initialIvestment: 10000,
         annualInvestment: 1500,
@@ -8,11 +8,11 @@ export default function UserInput({label, inputId, placeholder}){
         duration: 10
     });
     */
-
+/*
     const [userInput, setUserInput]= useState({
         inputvalue: placeholder,
     });
-
+*/
     /*function handleChange(inputIdentifier, newValue){
         setUserInput(prevUserInputs => {
             return{
@@ -22,12 +22,12 @@ export default function UserInput({label, inputId, placeholder}){
         });
     }
         */
-
+/*
     function handleChange(event){
         setUserInput({ inputvalue: Number(event.target.value) });
 
     }
-    
+ */   
 
     return (
         <div>
@@ -37,11 +37,11 @@ export default function UserInput({label, inputId, placeholder}){
                 id={inputId} 
                 name={inputId} 
                 required
-                value={userInput.inputvalue}
+                value={value}
                 //{/*onChange={(event) => handleChange(event.target.value)} *///
-                onChange={handleChange}
+                onChange={(event) => onInputChange(inputId, event.target.value)}
             />
-            {console.log(userInput.inputvalue)}
+            {/*{console.log(inputId, value)} */}
         </div>
 
     );
