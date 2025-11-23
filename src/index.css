@@ -14,7 +14,12 @@ body {
   min-height: 100vh;
 }
 
-#header {
+#header, footer {
+  text-align: center;
+  margin: 3rem auto;
+}
+
+#footer {
   text-align: center;
   margin: 3rem auto;
 }
@@ -43,6 +48,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   gap: 1.5rem;
+
 }
 
 #user-input label {
